@@ -31,11 +31,16 @@ from lifelines import KaplanMeierFitter
 sys.path.append(os.path.dirname(os.getcwd()))
 from utils import TRAIN_DIR, load_expression, load_survival, find_file
 
-# 한글 폰트 설정 (Windows: 맑은 고딕)
-plt.rcParams['font.family'] = 'Malgun Gothic'
-plt.rcParams['axes.unicode_minus'] = False
 plt.rcParams['figure.dpi'] = 100
 sns.set_style('whitegrid')
+
+# 한글 폰트 설정 (set_style 이후에 적용해야 덮어쓰이지 않음)
+from matplotlib import font_manager as fm
+fm.fontManager.addfont('C:/Windows/Fonts/malgun.ttf')
+prop = fm.FontProperties(fname='C:/Windows/Fonts/malgun.ttf')
+plt.rc('font', family=prop.get_name())
+plt.rc('axes', unicode_minus=False)
+print('폰트:', plt.rcParams['font.family'])
 print('설정 완료')"""
 ),
 
