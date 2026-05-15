@@ -1,0 +1,19 @@
+# 학습 데이터 (용량 큼 - 별도 공유)
+Data/train/
+
+# 예측 결과 (로컬 생성물)
+results/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / Mac 메타데이터
+.DS_Store
+Thumbs.db
+__MACOSX/
+Data/__MACOSX/
+
+# Claude Code
+.claude/
